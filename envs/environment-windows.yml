@@ -21,13 +21,8 @@ dependencies:
   - cellpose
   - statannotations
   - ipywidgets
+  - mpl-interactions
   - trackpy
   - tifffile
   - readlif
   - aicsimageio
-  - ipympl
-  - pytest
-  - nbconvert
-  - pip
-  - pip:
-      - mpl_interactions[jupyter]

@@ -4,24 +4,23 @@ channels:
   - conda-forge
 dependencies:
   - python
-  - pip
-  - pytorch-nightly::pytorch
-  - pytorch-nightly::torchvision
-  - conda-forge::ipykernel
-  - conda-forge::matplotlib
-  - conda-forge::pandas
-  - conda-forge::seaborn
-  - conda-forge::scipy
-  - conda-forge::scikit-image
-  - conda-forge::openpyxl
-  - conda-forge::xmlschema
-  - conda-forge::bioformats_jar
-  - conda-forge::nd2
-  - conda-forge::cellpose
-  - conda-forge::statannotations
-  - conda-forge::ipywidgets
-  - conda-forge::mpl-interactions
-  - conda-forge::trackpy
-  - conda-forge::tifffile
-  - conda-forge::readlif
-  - conda-forge::aicsimageio
+  - pytorch
+  - torchvision
+  - ipykernel
+  - matplotlib
+  - pandas
+  - seaborn
+  - scipy
+  - scikit-image
+  - openpyxl
+  - xmlschema
+  - bioformats_jar
+  - nd2
+  - cellpose
+  - statannotations
+  - ipywidgets
+  - mpl-interactions
+  - trackpy
+  - tifffile
+  - readlif
+  - aicsimageio
