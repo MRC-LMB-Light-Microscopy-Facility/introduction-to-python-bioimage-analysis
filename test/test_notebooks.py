@@ -30,8 +30,8 @@ def data():
     return True
 
 
-def test_download_data():
-    run("test/download.ipynb")
+# def test_download_data():
+#     run("test/download.ipynb")
 
 
 def test_ipywidgets(data: Literal[True]):

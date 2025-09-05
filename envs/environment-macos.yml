@@ -1,7 +1,8 @@
 name: imaging-python-course
 channels:
-  - pytorch-nightly
+  - pytorch
   - conda-forge
+  - nodefaults
 dependencies:
   - python
   - pytorch
@@ -16,11 +17,12 @@ dependencies:
   - xmlschema
   - bioformats_jar
   - nd2
-  - cellpose
+  - cellpose<=3
   - statannotations
   - ipywidgets
   - mpl-interactions
   - trackpy
   - tifffile
   - readlif
-  - aicsimageio
+  - bioio
+  - nbformat
