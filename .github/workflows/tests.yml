@@ -39,6 +39,9 @@ jobs:
           activate-environment: imaging-python-course
           environment-file: ${{ matrix.env_file }}             
           auto-activate-base: false
+          miniforge-version: latest
+          channels: conda-forge
+          conda-remove-defaults: "true"
           
       # Test notebooks
       - name: Test

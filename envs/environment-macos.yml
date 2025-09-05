@@ -4,6 +4,8 @@ channels:
   - nodefaults
 dependencies:
   - python
+  - nbformat
+  - nbconvert
   - scikit-image
   - ipykernel
   - matplotlib
@@ -11,8 +13,6 @@ dependencies:
   - seaborn
   - openpyxl
   - pytest
-  - nbformat
-  - nbconvert
   - pip
   - pytorch
   - torchvision

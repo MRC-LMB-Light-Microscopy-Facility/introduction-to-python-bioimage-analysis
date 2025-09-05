@@ -4,7 +4,7 @@ import nbformat
 from nbconvert.preprocessors import ExecutePreprocessor
 from nbconvert.preprocessors import CellExecutionError
 
-ep = ExecutePreprocessor(timeout=600, kernel_name="python3")
+ep = ExecutePreprocessor(timeout=600, kernel_name="python")
 
 
 def run(path):

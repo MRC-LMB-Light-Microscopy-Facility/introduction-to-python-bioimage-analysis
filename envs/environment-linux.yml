@@ -4,6 +4,8 @@ channels:
   - nodefaults
 dependencies:
   - python
+  - nbformat
+  - nbconvert
   - scikit-image
   - ipykernel
   - matplotlib
@@ -11,12 +13,11 @@ dependencies:
   - seaborn
   - openpyxl
   - pytest
-  - nbformat
-  - nbconvert
+  - pip
+  - pytorch
+  - torchvision
+  - cellpose<=3
   - pip
   - pip:
-      - torch
-      - torchvision
-      - cellpose<=3
       - mpl_interactions[jupyter]
       
