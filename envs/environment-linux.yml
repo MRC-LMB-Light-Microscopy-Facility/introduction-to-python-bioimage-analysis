@@ -1,33 +1,22 @@
 name: imaging-python-course
 channels:
-  - pytorch
-  - nvidia
   - conda-forge
+  - nodefaults
 dependencies:
   - python
-  - pytorch
-  - pytorch-cuda=11.7
-  - torchvision
+  - scikit-image
   - ipykernel
   - matplotlib
   - pandas
   - seaborn
-  - scipy
-  - scikit-image
   - openpyxl
-  - xmlschema
-  - bioformats_jar
-  - nd2
-  - cellpose
-  - statannotations
-  - ipywidgets
-  - trackpy
-  - tifffile
-  - readlif
-  - aicsimageio
-  - ipympl
   - pytest
+  - nbformat
   - nbconvert
   - pip
   - pip:
+      - torch
+      - torchvision
+      - cellpose<=3
       - mpl_interactions[jupyter]
+      
