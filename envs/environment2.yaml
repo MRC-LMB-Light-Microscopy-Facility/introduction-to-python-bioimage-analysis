@@ -1,0 +1,30 @@
+name: cellpose_pytrain2
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - pip
+  - ipykernel
+  - jupyterlab
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-image
+  - ipywidgets
+  - tifffile
+  - pillow
+  - natsort
+  - pyqt  # GUI backend for Cellpose
+  - openjdk=11  # Java for Bioformats
+  - pip:
+      - cellpose[gui]==3.*         # v3, GUI-enabled, no SAM
+      - torch
+      - torchvision
+      - --extra-index-url=https://download.pytorch.org/whl/cu129
+      - bioio
+      - bioio-bioformats
+      - statannotations
