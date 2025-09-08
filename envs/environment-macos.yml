@@ -3,20 +3,22 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  - python
-  - nbformat
-  - nbconvert
+  - python=3.11
   - scikit-image
   - ipykernel
   - matplotlib
   - pandas
   - seaborn
   - openpyxl
-  - pytest
-  - pip
   - pytorch
   - torchvision
+  - numba
   - cellpose<=3
+  - napari
   - pip
   - pip:
-      - mpl_interactions[jupyter]
+    - bioio
+    - bioio-nd2
+    - bioio-tifffile
+    - bioio-czi
+    - bioio-lif

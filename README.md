@@ -66,3 +66,15 @@ To install the environment:
 sudo -E -s
 conda env create -f envs/environment-linux.yml
 ```
+
+
+## Contributing
+
+Clone the repository and create and activate the environment, install the following extra dependencies:
+```bash
+python -m pip install pytest nbconvert nbformat
+```
+Make some changes, and test the changes:
+```bash
+python -m pytest test/
+```

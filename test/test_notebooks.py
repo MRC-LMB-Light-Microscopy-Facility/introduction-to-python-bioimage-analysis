@@ -3,6 +3,7 @@ import pytest
 import nbformat
 from nbconvert.preprocessors import ExecutePreprocessor
 from nbconvert.preprocessors import CellExecutionError
+from pathlib import Path
 
 ep = ExecutePreprocessor(timeout=600, kernel_name="python")
 
@@ -19,24 +20,22 @@ def run(path):
 
 @pytest.fixture
 def data():
-    from urllib.request import urlopen
-    from io import BytesIO
-    from zipfile import ZipFile
+    folder = Path("./data")
+    if not folder.exists():
+        from urllib.request import urlopen
+        from io import BytesIO
+        from zipfile import ZipFile
 
-    url = "https://cloud.mrc-lmb.cam.ac.uk/s/wK4m29X6GCYdG8S/download/data.zip"
-    http_response = urlopen(url)
-    zipfile = ZipFile(BytesIO(http_response.read()))
-    zipfile.extractall(path="../data")
-    return True
+        url = "https://cloud3.mrc-lmb.cam.ac.uk/public.php/dav/files/Wpewom2LwE8YL7d/?accept=zip"
 
-
-# def test_download_data():
-#     run("test/download.ipynb")
-
-
-def test_ipywidgets(data: Literal[True]):
-    run("test/ipywidget.ipynb")
+        http_response = urlopen(url)
+        zipfile = ZipFile(BytesIO(http_response.read()))
+        zipfile.extractall(path="./data")
+        return True
+    else:
+        return True
 
 
-def test_mplinteraction(data: Literal[True]):
-    run("test/mplinteraction.ipynb")
+def test_notebooks(data: Literal[True]):
+    for nb in Path("nbs").glob("*.ipynb"):
+        run(nb)
