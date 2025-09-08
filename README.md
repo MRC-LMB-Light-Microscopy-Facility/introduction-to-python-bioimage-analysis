@@ -1,14 +1,11 @@
 # Bio image analysis in python
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jboulanger/Python-course/HEAD)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jboulanger/Python-course)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://github.com/MRC-LMB-Light-Microscopy-Facility/introduction-to-python-bioimage-analysis/HEAD)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/MRC-LMB-Light-Microscopy-Facility/introduction-to-python-bioimage-analysis)
 
 This course introduces the essential steps of setting up an image analysis workflow for light microscopy data. It covers the topics of image loading, processing and quantification. It illustrates how to extract relevant information from an image using common Python packages.
 
-To run the notebook on our local jupyter hub server copy and paste the following link into the browser: 
 
-http://10.91.193.124/hub/user-redirect/git-pull?repo=https://github.com/jboulanger/Python-course&branch=main&app=lab
-
-You can also use the badges at the top to open the repository on Google Colab and Binder.
+You can use the badges at the top to open the repository on Google Colab and Binder.
 
 
 ## Installation

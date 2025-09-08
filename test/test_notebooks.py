@@ -4,6 +4,9 @@ import nbformat
 from nbconvert.preprocessors import ExecutePreprocessor
 from nbconvert.preprocessors import CellExecutionError
 from pathlib import Path
+import os
+
+os.environ["JUPYTER_PLATFORM_DIRS"] = "1"
 
 ep = ExecutePreprocessor(timeout=600, kernel_name="python")
 

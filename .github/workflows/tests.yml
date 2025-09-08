@@ -43,10 +43,9 @@ jobs:
           channels: conda-forge
           conda-remove-defaults: "true"
           
-      # Test notebooks
+      # Test notebooks and module loading
       - name: Test
         run: |
           cd test
-          pip install pytest nbformat nbconvert
-          export JUPYTER_PLATFORM_DIRS=1
-          pytest test_notebooks.py          
+          python -m pip install pytest nbformat nbconvert
+          python -m pytest test/      

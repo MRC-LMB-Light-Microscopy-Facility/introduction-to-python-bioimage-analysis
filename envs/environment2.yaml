@@ -22,9 +22,9 @@ dependencies:
   - openjdk=11  # Java for Bioformats
   - pip:
       - cellpose[gui]==3.*         # v3, GUI-enabled, no SAM
-      - torch
-      - torchvision
-      - --extra-index-url=https://download.pytorch.org/whl/cu129
       - bioio
       - bioio-bioformats
       - statannotations
+      - --extra-index-url=https://download.pytorch.org/whl/cu129
+      - torch
+      - torchvision

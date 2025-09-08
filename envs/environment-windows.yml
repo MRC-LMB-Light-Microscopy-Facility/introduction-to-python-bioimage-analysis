@@ -7,14 +7,15 @@ dependencies:
   - scikit-image
   - ipykernel
   - matplotlib
-  - pandas
   - seaborn
+  - pandas
   - openpyxl
-  - pytorch
-  - torchvision
   - numba
   - cellpose<=3
   - napari
+  - pytorch-gpu
+  - torchvision
+  - laptrack
   - pip
   - pip:
     - bioio
