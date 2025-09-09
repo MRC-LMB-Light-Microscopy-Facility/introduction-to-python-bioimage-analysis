@@ -12,10 +12,11 @@ dependencies:
   - openpyxl
   - numba
   - cellpose<=3
-  - napari
-  - pytorch-gpu
+  # - napari
+  - pytorch
   - torchvision
   - laptrack
+  - dask[array,dataframe]
   - pip
   - pip:
     - bioio
