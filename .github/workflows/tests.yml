@@ -36,7 +36,6 @@ jobs:
       # Set up miniconda and create environment
       - uses: conda-incubator/setup-miniconda@v3
         with:
-          python-version: 3.11
           activate-environment: imaging-python-course
           environment-file: ${{ matrix.env_file }}             
           auto-activate-base: false
