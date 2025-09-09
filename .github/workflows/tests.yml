@@ -38,14 +38,14 @@ jobs:
         with:
           activate-environment: imaging-python-course
           environment-file: ${{ matrix.env_file }}
-          channels: conda-forge
+          channels: conda-forge      
+          auto-activate-base: false
+          miniforge-version: latest
           conda-remove-defaults: "true"
-          channel-priority: strict
-          
+
+
       # Test notebooks and module loading
       - name: Test
         run: |
-          conda init
-          conda activate imaging-python-course
           python -m pip install pytest nbformat nbconvert
           python -m pytest test/
