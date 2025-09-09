@@ -37,8 +37,7 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: imaging-python-course
-          environment-file: ${{ matrix.env_file }}             
-          auto-activate-base: false
+          environment-file: ${{ matrix.env_file }}
           channels: conda-forge
           conda-remove-defaults: "true"
           channel-priority: strict
@@ -46,6 +45,7 @@ jobs:
       # Test notebooks and module loading
       - name: Test
         run: |
+          conda init
           conda activate imaging-python-course
           python -m pip install pytest nbformat nbconvert
           python -m pytest test/
