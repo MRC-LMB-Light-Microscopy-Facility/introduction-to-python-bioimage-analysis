@@ -3,6 +3,7 @@
 This enable to check if the environment is correct.
 """
 
+from typing import Literal
 import pytest
 from pathlib import Path
 
@@ -31,7 +32,7 @@ def test_matplotlib():
     plt.plot([1, 2, 3], [1, 2, 3])
 
 
-def test_bioio():
+def test_bioio(data: Literal[True]):
     """Loading images with bioio"""
     from pathlib import Path
     from bioio import BioImage

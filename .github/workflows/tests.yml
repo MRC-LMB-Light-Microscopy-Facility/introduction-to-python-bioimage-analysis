@@ -49,6 +49,7 @@ jobs:
         if: matrix.os != 'windows-latest'
         shell: bash -el {0}
         run: |
+          conda remove napari
           conda install pytest nbformat nbconvert
           python -m pytest test/test_modules.py
       
@@ -57,6 +58,7 @@ jobs:
         if: matrix.os == 'windows-latest'
         shell: pwsh
         run: |
+          conda remove napari
           conda install pytest nbformat nbconvert
           python -m pytest test/test_modules.py
           
