@@ -46,5 +46,6 @@ jobs:
       # Test notebooks and module loading
       - name: Test
         run: |
+          conda activate imaging-python-course
           python -m pip install pytest nbformat nbconvert
           python -m pytest test/
