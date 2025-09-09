@@ -46,6 +46,7 @@ jobs:
 
       # Test notebooks and module loading
       - name: Test
+        shell: conda {0}
         run: |
           python -m pip install pytest nbformat nbconvert
           python -m pytest test/
