@@ -46,6 +46,5 @@ jobs:
       # Test notebooks and module loading
       - name: Test
         run: |
-          cd test
           python -m pip install pytest nbformat nbconvert
-          python -m pytest test/      
+          python -m pytest test/
