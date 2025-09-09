@@ -36,12 +36,13 @@ jobs:
       # Set up miniconda and create environment
       - uses: conda-incubator/setup-miniconda@v3
         with:
+          python-version: 3.11
           activate-environment: imaging-python-course
           environment-file: ${{ matrix.env_file }}             
           auto-activate-base: false
-          miniforge-version: latest
           channels: conda-forge
           conda-remove-defaults: "true"
+          channel-priority: strict
           
       # Test notebooks and module loading
       - name: Test

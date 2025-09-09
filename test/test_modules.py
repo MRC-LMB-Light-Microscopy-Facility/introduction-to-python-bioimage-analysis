@@ -65,3 +65,7 @@ def test_cellpose():
     from cellpose import models
 
     model = models.Cellpose(gpu=False, model_type="cyto2")
+
+
+def test_laptrack():
+    import laptrack
