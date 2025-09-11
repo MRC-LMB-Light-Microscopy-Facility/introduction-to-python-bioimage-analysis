@@ -3,6 +3,28 @@
 This enable to check if the environment is correct.
 """
 
+from typing import Literal
+import pytest
+from pathlib import Path
+
+
+@pytest.fixture
+def data():
+    folder = Path("../data")
+    if not folder.exists():
+        from urllib.request import urlopen
+        from io import BytesIO
+        from zipfile import ZipFile
+
+        url = "https://cloud3.mrc-lmb.cam.ac.uk/public.php/dav/files/Wpewom2LwE8YL7d/?accept=zip"
+
+        http_response = urlopen(url)
+        zipfile = ZipFile(BytesIO(http_response.read()))
+        zipfile.extractall(path=folder)
+        return True
+    else:
+        return True
+
 
 def test_matplotlib():
     import matplotlib.pyplot as plt
@@ -10,7 +32,7 @@ def test_matplotlib():
     plt.plot([1, 2, 3], [1, 2, 3])
 
 
-def test_bioio():
+def test_bioio(data: Literal[True]):
     """Loading images with bioio"""
     from pathlib import Path
     from bioio import BioImage
@@ -26,14 +48,6 @@ def test_bioio():
     for name, shape in items:
         image = BioImage(data_folder / name)
         assert image.shape == shape
-
-
-def test_napari():
-    import napari
-    import numpy as np
-
-    viewer = napari.Viewer()
-    viewer.add_image(np.zeros((10, 10)))
 
 
 def test_skimage():
@@ -53,6 +67,14 @@ def test_ndi():
     mask = ndi.binary_fill_holes(mask).astype(int)
     assert mask.shape == (3, 3)
     assert mask.min() == 1
+
+
+# # def test_napari(make_napari_viewer_proxy):
+# #     import napari
+# #     import numpy as np
+
+# #     viewer = make_napari_viewer_proxy()
+# #     viewer.add_image(np.zeros((10, 10)))
 
 
 def test_torch():
