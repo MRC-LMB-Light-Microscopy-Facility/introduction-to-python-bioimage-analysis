@@ -37,12 +37,29 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: imaging-python-course
-          environment-file: ${{ matrix.env_file }}             
+          environment-file: ${{ matrix.env_file }}
+          channels: conda-forge      
           auto-activate-base: false
-          
-      # Test notebooks
-      - name: Test
+          miniforge-version: latest
+          conda-remove-defaults: "true"
+
+
+      # Test notebooks and module loading
+      - name: Test linux and macOS
+        if: matrix.os != 'windows-latest'
+        shell: bash -el {0}
         run: |
-          cd test
-          pip install pytest 
-          pytest test_notebooks.py          
+          conda remove napari
+          conda install pytest nbformat nbconvert
+          python -m pytest test/test_modules.py
+      
+      # Test notebooks and module loading
+      - name: Test windows
+        if: matrix.os == 'windows-latest'
+        shell: pwsh
+        run: |
+          conda remove napari
+          conda install pytest nbformat nbconvert
+          python -m pytest test/test_modules.py
+          
+      

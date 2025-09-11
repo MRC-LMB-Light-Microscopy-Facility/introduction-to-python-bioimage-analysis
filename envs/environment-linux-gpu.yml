@@ -16,7 +16,6 @@ dependencies:
   - pytorch
   - torchvision
   - laptrack
-  - dask[array,dataframe]
   - pip
   - pip:
     - bioio

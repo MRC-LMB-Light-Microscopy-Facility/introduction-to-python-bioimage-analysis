@@ -13,10 +13,9 @@ dependencies:
   - numba
   - cellpose<=3
   - napari
-  - pytorch
+  - pytorch-gpu
   - torchvision
   - laptrack
-  - dask[array,dataframe]
   - pip
   - pip:
     - bioio
@@ -24,4 +23,3 @@ dependencies:
     - bioio-tifffile
     - bioio-czi
     - bioio-lif
-
