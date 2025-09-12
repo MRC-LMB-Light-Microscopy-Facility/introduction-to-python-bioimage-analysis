@@ -19,7 +19,7 @@ dependencies:
     - bioio
     - bioio-nd2
     - bioio-tifffile
-    - bioio-czi
+    # - bioio-czi
     - bioio-lif
     - torch
     - torchvision
