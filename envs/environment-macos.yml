@@ -3,11 +3,12 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  - python=3.11
+  - python
   - scikit-image
   - ipykernel
   - matplotlib
   - seaborn
+  - statannotations
   - pandas
   - openpyxl
   - numba

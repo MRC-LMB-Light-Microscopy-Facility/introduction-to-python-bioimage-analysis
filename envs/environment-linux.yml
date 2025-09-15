@@ -8,6 +8,7 @@ dependencies:
   - ipykernel
   - matplotlib
   - seaborn
+  - statannotations
   - pandas
   - openpyxl
   - numba
@@ -16,7 +17,6 @@ dependencies:
   - pytorch
   - torchvision
   - laptrack
-  - dask[array,dataframe]
   - pip
   - pip:
     - bioio
