@@ -15,6 +15,7 @@ dependencies:
   - cellpose<=3
   - napari
   - laptrack
+  - pyqt
   - pip
   - pip:
     - bioio

@@ -1,6 +1,7 @@
 name: imaging-python-course
 channels:
   - conda-forge
+  - nvidia
   - nodefaults
 dependencies:
   - python
@@ -12,10 +13,10 @@ dependencies:
   - pandas
   - openpyxl
   - numba
+  - pytorch
+  - cuda-toolkit=12.4.0
   - cellpose<=3
   - napari
-  - pytorch
-  - torchvision
   - laptrack
   - pip
   - pip:
