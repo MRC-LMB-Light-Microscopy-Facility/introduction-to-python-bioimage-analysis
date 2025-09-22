@@ -12,7 +12,7 @@ dependencies:
   - pandas
   - openpyxl
   - numba
-  - cellpose<=3
+  - cellpose<4
   - napari
   - pytorch
   - torchvision
