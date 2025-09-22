@@ -15,7 +15,7 @@ dependencies:
   - numba
   - pytorch
   - cuda-toolkit=12.4.0
-  - cellpose<=3
+  - cellpose<4
   - napari
   - laptrack
   - pip
