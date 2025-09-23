@@ -2,28 +2,29 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://github.com/MRC-LMB-Light-Microscopy-Facility/introduction-to-python-bioimage-analysis/HEAD)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/MRC-LMB-Light-Microscopy-Facility/introduction-to-python-bioimage-analysis)
 
-This course introduces the essential steps of setting up an image analysis workflow for light microscopy data. It covers the topics of image loading, processing and quantification. It illustrates how to extract relevant information from an image using common Python packages.
-
+This course introduces the analysis of light microscopy data using python and Jupyter notebooks through a problem-solving approach. It illustrates how to extract relevant information from an image using common Python packages.
 
 You can use the badges at the top to open the repository on Google Colab and Binder.
 
+### Learning objectives
+Jupyter notebooks, loading images, numpy arrays, image visualization with matplotlib and napari, image filtering, mask post-processing, spot detection, region measurement, object parenting, cell segmentation with cellpose, particle tracking, statistical analysis.
+
+
+### Problems
+1. Quantification of perixosomes in cells
+2. Cargo relocation 
+3. Segmentation of bone marrow cells
+4. Tracking of transcription factors
 
 ## Installation
 
-To run the notebook on your own computer, you need to install a few packages:
+Install first [miniconda](https://docs.anaconda.com/free/miniconda/miniconda-install/). On Windows, install miniconda in a folder without spaces in the path (e.g. `C:\Software\`).
 
-### Using miniconda
-Install first [miniconda](https://docs.anaconda.com/free/miniconda/miniconda-install/).
+Download, [Visual Code](https://code.visualstudio.com/download).
 
 On Windows with cuda support:
 ```bash
-conda env create -f envs/environment-win.yml
-conda activate imaging-python-course
-```
-
-On Linux with cuda support:
-```bash
-conda env create -f envs/environment-linux.yml
+conda env create -f envs/environment-windows-gpu.yml
 conda activate imaging-python-course
 ```
 
@@ -33,47 +34,8 @@ conda env create -f envs/environment-macos.yml
 conda activate imaging-python-course
 ```
 
-### Using micromamba
-In a terminal on Linux and MacOS or in a git bash terminal on MS Windows:
-
+On Linux with cuda support:
 ```bash
-# install micromamba
-"${SHELL}" <(curl -L micro.mamba.pm/install.sh)
-# reload the shell
-${SHELL}
-# create an environment
-micromamba -qy env create -f environment-linux.yml
-# activate the environment 
-micromamba activate imaging-python-course
-# start the notebook
-jupyter lab 
-```
-
-### Jupyterhub
-
-Note that to have widgets working on jupyter lab, we need to install jupyterlab_widgets :
-
-```bash
-sudo -E -s
-conda install -n base -c conda-forge jupyterlab_widgets
-```
-
-To install the environment:
-```bash
-sudo -E -s
-conda env create -f envs/environment-linux.yml
-```
-
-
-## Contributing
-
-Clone the repository and create and activate the environment, install the following extra dependencies:
-
-```bash
-python -m pip install pytest nbconvert nbformat
-```
-
-Make some changes, and test the changes:
-```bash
-python -m pytest test/
+conda env create -f envs/environment-linux-gpu.yml
+conda activate imaging-python-course
 ```
