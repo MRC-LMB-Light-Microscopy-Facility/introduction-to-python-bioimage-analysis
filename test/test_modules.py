@@ -84,7 +84,9 @@ def test_torch():
 
 
 def test_cellpose():
-    from cellpose import models
+    from cellpose import models, version
+
+    assert version.split(".")[0] == "3"
 
     model = models.Cellpose(gpu=False, model_type="cyto2")
 
