@@ -2,6 +2,7 @@ data
 *.csv
 *.svg
 *.eps
+*.pdf
 .DS_Store
 *checkpoint.ipynb
 .pytest_cache
