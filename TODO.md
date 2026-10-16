@@ -12,6 +12,8 @@ This is list of tasks to do before next session.
 1. aim for 4 hours in total
 1. use scaffolded notebooks
 1. use the computer in the image analysis room
+1. enable people to run an existing workflow and adapt it.
+1. introduce critical checking skills
 
 ## Redefine learning objectives (LO)  ✅
 Here is current list
@@ -62,7 +64,7 @@ The current problem list is
 
 **Synopsis:** We are interested in counting the number of peroxisomes per cell.
 
-**Expected results:** A CSV with one row per cell and its peroxisome count, plus a napari view showing cell labels and detected peroxisomes.
+**Expected results:** A CSV with one row per cell and its peroxisome count, plus a napari view showing cell labels and detected peroxisomes. ⚠️ We have only one cell in the picture.
 
 ### Cargo tethering
 **Type:** practice exercise
