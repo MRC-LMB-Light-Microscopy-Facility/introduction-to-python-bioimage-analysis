@@ -13,9 +13,9 @@ This is list of tasks to do before next session.
 1. use scaffolded notebooks
 1. use the computer in the image analysis room
 1. enable people to run an existing workflow and adapt it.
-1. introduce critical checking skills
+1. introduce critical checking skills (visualization)
 
-## Redefine learning objectives (LO)  ✅
+## Redefine learning objectives (LO) ✅
 Here is current list
 1. Bioimage analysis
     1. data and metadata loading (bioio/xarray)

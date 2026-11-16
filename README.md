@@ -2,26 +2,23 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://github.com/MRC-LMB-Light-Microscopy-Facility/introduction-to-python-bioimage-analysis/HEAD)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/MRC-LMB-Light-Microscopy-Facility/introduction-to-python-bioimage-analysis)
 
-This course introduces the analysis of light microscopy data using python and Jupyter notebooks through a problem-solving approach. It illustrates how to extract relevant information from an image using the relevant Python packages.
+This course introduces light microscopy image analysis using Python and Jupyter notebooks through a practical, problem-solving approach. It demonstrates how to extract quantitative data from microscopy images using modern, open-source Python packages.
 
-This course is ideal for researchers working with microscopy data who want to harness the power of Python-based, open-source tools for image analysis. Python provides a flexible and customizable framework for building reproducible workflows — from quick visual inspections to fully automated pipelines — with support for batch processing and scalable analysis across datasets of any size. 
+Designed for researchers working with microscopy data, this course shows how to harness Python's flexible ecosystem to build reproducible workflows-from quick visual inspections to automated, scalable batch-processing pipelines.
 
-### Learning objectives
-- Notebooks
-- Loading images and metadata (BioIO)
-- Blob detection.
-- Cell segmentation (Cellpose)
-- Object parenting
-- Region Measurements
-- Visualization (Matplotlib/Napari)
-- Statistics Analysis (SciPy)
-- Batch processing 
-- Tracking 
+### Learning Objectives
+By the end of this course, you will be able to:
+- **Foundations & I/O:** Navigate Jupyter notebooks and load multi-dimensional images and metadata with `BioIO`
+- **Visualization:** Inspect images, overlays, and segmentation masks using `Matplotlib` and `napari`
+- **Segmentation & Detection:** Perform blob detection, deep-learning cell segmentation with `Cellpose`, and object parenting
+- **Quantitative Analysis:** Extract region measurements, track dynamic objects over time, and run statistical analyses with `SciPy`
+- **Automation:** Scale workflows across large datasets using batch processing
 
-### Problems
-1. Stress granule characterization
-2. Cargo relocation 
-3. Tracking of transcription factors
+### Case Studies
+You will apply these techniques to three real-world biological problems:
+1. **Stress granule characterization** (blob detection, cell segmentation, and object parenting)
+2. **Cargo relocation** (compartmental segmentation and intensity/region measurements)
+3. **Tracking of transcription factors** (time-lapse particle tracking and dynamics)
 
 ## Installation
 
